@@ -1,8 +1,8 @@
 {
-  "name": "cors_proxy",
+  "name": "cors-proxy",
   "version": "1.0.0",
   "description": "Upload files from another domains",
-  "main": "cors_proxy.js",
+  "main": "cors-proxy.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Alexgerman/cors-proxy.git"
