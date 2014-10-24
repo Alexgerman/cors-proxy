@@ -1,0 +1,15 @@
+{
+  "name": "cors_proxy",
+  "version": "1.0.0",
+  "description": "Upload files from another domains",
+  "main": "cors_proxy.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alexgerman/cors-proxy.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause"
+}
