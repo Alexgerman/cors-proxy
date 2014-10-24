@@ -59,7 +59,7 @@ module.exports = function(origin_allowed, application_port) {
                         response.end( JSON.stringify( answer ) );
                     } );
                     setTimeout( function() {
-                        fs.unlink( 'app' + filename );
+                        fs.unlink( 'app/' + filename );
                     }, 120000 );//two minutes later file will be deleted
                 }
 
