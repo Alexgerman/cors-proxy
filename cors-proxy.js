@@ -1,4 +1,4 @@
-module.exports = function(origin_allowed, application_port) {
+module.exports = function(origin_allowed, application_port, app_dir) {
     var http = require( 'http' ),
         express = require( 'express' ),
         app = express(),
@@ -52,14 +52,14 @@ module.exports = function(origin_allowed, application_port) {
                     response.end( JSON.stringify( answer ) );
                 }
                 else {
-                    file = fs.createWriteStream( 'app/' + filename );
+                    file = fs.createWriteStream( app_dir + filename );
                     resp.pipe( file );
                     resp.on( 'end', function() {
                         answer = {statusCode: 200, createdPath: filename};
                         response.end( JSON.stringify( answer ) );
                     } );
                     setTimeout( function() {
-                        fs.unlink( 'app/' + filename );
+                        fs.unlink( app_dir + filename );
                     }, 120000 );//two minutes later file will be deleted
                 }
 
